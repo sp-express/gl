@@ -17,7 +17,7 @@ class Response extends DTO
         ]);
     }
 
-    public static function responseWithErrorMessage(string $message, ?int $httpCode): Response
+    public static function responseWithErrorMessage(string $message, ?int $httpCode = null): Response
     {
         return new static([
             'success' => false,

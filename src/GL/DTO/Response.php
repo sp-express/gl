@@ -8,6 +8,7 @@ class Response extends DTO
 {
     protected $success;
     protected $message;
+    protected $httpCode;
 
     public static function responseWithSuccess(): Response
     {
@@ -16,11 +17,12 @@ class Response extends DTO
         ]);
     }
 
-    public static function responseWithErrorMessage(string $message): Response
+    public static function responseWithErrorMessage(string $message, ?int $httpCode): Response
     {
         return new static([
             'success' => false,
             'message' => $message,
+            'httpCode' => $httpCode,
         ]);
     }
 
@@ -28,5 +30,16 @@ class Response extends DTO
     {
         return $this->success;
     }
+
+    public function getMessage(): ?string
+    {
+        return $this->message;
+    }
+
+    public function getHttpCode(): ?int
+    {
+        return $this->httpCode;
+    }
+
 
 }

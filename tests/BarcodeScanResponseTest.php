@@ -38,5 +38,5 @@ class BarcodeScanResponseTest extends TestCase
 
         $this->assertJsonStringEqualsJsonString('{"success":false,"message":"Some error"}',  json_encode($response));
     }
-    
+
 }

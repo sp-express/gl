@@ -6,7 +6,7 @@ declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 use swiatprzesylek\GL\DTO\BarcodeScanRequest;
 
-class BarcodeScanRequestTest extends TestCase
+final class BarcodeScanRequestTest extends TestCase
 {
     public function testIsBarcodeSetCorrectly(): void
     {

@@ -1,0 +1,20 @@
+{
+    "name": "swiatprzesylek/gl",
+    "description": "swiatprzesylek global library",
+    "type": "library",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4" : {
+            "swiatprzesylek\\GL\\" : "src/GL"
+        }
+    },
+    "authors": [
+        {
+            "name": "IT department",
+            "email": "itservices@swiatprzesylek.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    }
+}

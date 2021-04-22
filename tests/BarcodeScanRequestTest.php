@@ -34,7 +34,7 @@ class BarcodeScanRequestTest extends TestCase
             'status' => 'SOME_STATUS',
         ]);
 
-        $this->assertEquals( '12345671', $request->getBarcode());
+        $this->assertEquals( '1234567', $request->getBarcode());
     }
 
 }

@@ -8,6 +8,6 @@ phpunit:
   stage: test
   script:
     - sh ci/php-install.sh
-    - composer install && ./vendor/bin/phpunit tests
+    - composer install && composer test
 stages:
   - test

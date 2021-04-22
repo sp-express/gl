@@ -10,7 +10,7 @@ class BarcodeScanResponse extends Response
 {
     public function jsonSerialize(): array
     {
-        return array_filter($this, function ($v, $k) {
+        return array_filter(get_object_vars($this), function ($v, $k) {
             return $v !== null;
         }, ARRAY_FILTER_USE_BOTH);
     }

@@ -19,12 +19,12 @@ class BarcodeScanRequest extends DTO
 
     public function getBarcode(): string
     {
-        return $this->barcode;
+        return (string)trim($this->barcode);
     }
 
     public function getStatus(): string
     {
-        return $this->status;
+        return (string)trim($this->status);
     }
 
     public function getLatitude(): ?string
@@ -36,7 +36,6 @@ class BarcodeScanRequest extends DTO
     {
         return $this->longitude;
     }
-
 
 
 }

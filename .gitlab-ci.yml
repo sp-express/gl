@@ -1,0 +1,13 @@
+default:
+  image: php:8.0.1-fpm-alpine
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - vendor/
+phpunit:
+  stage: test
+  script:
+    - sh ci/php-install.sh
+    - composer install && ./vendor/bin/phpunit tests
+stages:
+  - test

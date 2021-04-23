@@ -39,4 +39,18 @@ class BarcodeScanResponseTest extends TestCase
         $this->assertJsonStringEqualsJsonString('{"success":false,"message":"Some error"}',  json_encode($response));
     }
 
+    public function testIsCorrectResponseClassIsReturned(): void
+    {
+        $response = BarcodeScanResponse::responseWithSuccess();
+
+        $this->assertInstanceOf('swiatprzesylek\GL\DTO\BarcodeScanResponse', $response);
+    }
+
+    public function testIsCorrectParentResponseClassIsReturned(): void
+    {
+        $response = BarcodeScanResponse::responseWithSuccess();
+
+        $this->assertInstanceOf('swiatprzesylek\GL\DTO\Response', $response);
+    }
+
 }

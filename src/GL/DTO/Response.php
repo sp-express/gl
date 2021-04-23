@@ -10,14 +10,24 @@ class Response extends DTO
     protected $message;
     protected $httpCode;
 
-    public static function responseWithSuccess(): Response
+    /**
+     * @return static
+     * @noinspection PhpMissingReturnTypeInspection
+     */
+    public static function responseWithSuccess()
     {
         return new static([
             'success' => true
         ]);
     }
 
-    public static function responseWithErrorMessage(string $message, ?int $httpCode = null): Response
+    /**
+     * @param string $message
+     * @param int|null $httpCode
+     * @noinspection PhpMissingReturnTypeInspection
+     * @return static
+     */
+    public static function responseWithErrorMessage(string $message, ?int $httpCode = null)
     {
         return new static([
             'success' => false,

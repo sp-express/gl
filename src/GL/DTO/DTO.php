@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace swiatprzesylek\GL\DTO;
 
-class DTO implements \JsonSerializable
+use JsonSerializable;
+
+class DTO implements JsonSerializable
 {
     public function __construct($data = [])
     {

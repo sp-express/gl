@@ -8,6 +8,7 @@ final class Scan
 {
     public const TYPE_PGP_REGISTERED = 'pgp_registered';
     public const TYPE_BBI = 'bbi';
+    public const TYPE_CSL_HOME_DELIVERY = 'csl_home_delivery';
 
     public const STATUS_DELIVERED = '40_delivered';
     public const STATUS_COULD_NOT_DELIVER = '55_could_not_deliver';
@@ -16,4 +17,7 @@ final class Scan
     public const STATUS_PROCESSED_IN_HUB = '60_processed_in_hub';
     public const STATUS_FORWARDED_FROM_HUB = '70_forwarded_from_hub';
 
+    public const STATUS_CSL_COLLECTED_FROM_WAREHOUSE = '20_collected';
+    public const STATUS_CSL_DELIVERED = '40_delivered';
+    public const STATUS_CSL_RETURN_TO_WAREHOUSE = '60_returned_to_warehouse';
 }

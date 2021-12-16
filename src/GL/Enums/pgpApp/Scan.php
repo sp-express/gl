@@ -22,4 +22,8 @@ final class Scan
     public const STATUS_CSL_COLLECTED_FROM_WAREHOUSE = '20_collected';
     public const STATUS_CSL_DELIVERED = '40_delivered';
     public const STATUS_CSL_RETURN_TO_WAREHOUSE = '60_returned_to_warehouse';
+
+    public const STATUS_ALI_RETURNS_SCANNED = '10_scanned';
+    
+    public const STATUS_CSL_HOME_REDIRECT_SCANNED = '10_scanned';
 }

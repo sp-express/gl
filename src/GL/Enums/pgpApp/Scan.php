@@ -9,6 +9,8 @@ final class Scan
     public const TYPE_PGP_REGISTERED = 'pgp_registered';
     public const TYPE_BBI = 'bbi';
     public const TYPE_CSL_HOME_DELIVERY = 'csl_home_delivery';
+    public const TYPE_ALI_RETURNS = 'ali_returns';
+    public const TYPE_CSL_HOME_REDIRECT = 'csl_home_redirect';
 
     public const STATUS_DELIVERED = '40_delivered';
     public const STATUS_COULD_NOT_DELIVER = '55_could_not_deliver';

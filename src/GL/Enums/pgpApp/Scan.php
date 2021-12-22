@@ -11,7 +11,7 @@ final class Scan
     public const TYPE_CSL_HOME_DELIVERY = 'csl_home_delivery';
     public const TYPE_ALI_RETURNS = 'ali_returns';
     public const TYPE_CSL_HOME_REDIRECT = 'csl_home_redirect';
-    public const TYPE_COURIER = 'courier';
+    public const TYPE_PRODUCT = 'product';
 
     public const STATUS_DELIVERED = '40_delivered';
     public const STATUS_COULD_NOT_DELIVER = '55_could_not_deliver';
@@ -28,5 +28,5 @@ final class Scan
     
     public const STATUS_CSL_HOME_REDIRECT_SCANNED = '10_scanned';
 
-    public const STATUS_COURIER_SCANNED = '10_scanned';
+    public const STATUS_PRODUCT_SCANNED = '10_scanned';
 }

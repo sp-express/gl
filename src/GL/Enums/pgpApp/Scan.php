@@ -12,6 +12,7 @@ final class Scan
     public const TYPE_ALI_RETURNS = 'ali_returns';
     public const TYPE_CSL_HOME_REDIRECT = 'csl_home_redirect';
     public const TYPE_PRODUCT = 'product';
+    public const TYPE_TEST = 'test';
 
     public const STATUS_DELIVERED = '40_delivered';
     public const STATUS_COULD_NOT_DELIVER = '55_could_not_deliver';
@@ -41,4 +42,10 @@ final class Scan
     public const STATUS_PGP_REGISTERED_WRONG_ADDRESS_DATA = 'STATUS_PGP_REGISTERED_WRONG_ADDRESS_DATA';
     public const STATUS_PGP_REGISTERED_RECEIVER_REFUSED = 'STATUS_PGP_REGISTERED_RECEIVER_REFUSED';
     public const STATUS_PGP_REGISTERED_IN_DELIVERY = 'STATUS_PGP_REGISTERED_IN_DELIVERY';
+
+    public const STATUS_TEST_NONE = 'STATUS_TEST_NONE';
+    public const STATUS_TEST_SIGNATURE = 'STATUS_TEST_SIGNATURE';
+    public const STATUS_TEST_SIGNATURE_2 = 'STATUS_TEST_SIGNATURE_2';
+    public const STATUS_TEST_DOUBLE = 'STATUS_TEST_DOUBLE';
+    public const STATUS_TEST_DOUBLE_2 = 'STATUS_TEST_DOUBLE_2';
 }

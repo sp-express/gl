@@ -14,10 +14,11 @@ class Response extends DTO
      * @return static
      * @noinspection PhpMissingReturnTypeInspection
      */
-    public static function responseWithSuccess()
+    public static function responseWithSuccess(?string $message = "")
     {
         return new static([
-            'success' => true
+            'success' => true,
+            'message' => $message,
         ]);
     }
 

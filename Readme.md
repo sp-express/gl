@@ -33,6 +33,9 @@ New version of package is publishing automatically on each push tag via CI actio
 For details see `gitlab-ci.yml`
 
 
+0. Changes should be merged into master BEFORE new tag
+
+
 1. See list of existing tags:
 ```
 git tag

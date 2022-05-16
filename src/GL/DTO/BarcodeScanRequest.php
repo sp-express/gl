@@ -100,7 +100,7 @@ class BarcodeScanRequest extends DTO
 
     public function getAdditionalSvg(): ?string
     {
-        return $this->additional_barcode;
+        return $this->additional_svg;
     }
 
     public function setAdditionalSvg(?string $additional_svg): void

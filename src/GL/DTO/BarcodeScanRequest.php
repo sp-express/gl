@@ -11,6 +11,8 @@ namespace swiatprzesylek\GL\DTO;
  * @property ?string $longitude
  * @property ?string $datetime
  * @property ?int $postman_id
+ * @property ?string $additional_barcode
+ * @property ?string $additional_svg
  */
 class BarcodeScanRequest extends DTO
 {
@@ -20,6 +22,8 @@ class BarcodeScanRequest extends DTO
     protected $longitude;
     protected $datetime;
     protected $postman_id;
+    protected $additional_barcode;
+    protected $additional_svg;
 
     public function getBarcode(): string
     {
@@ -79,6 +83,29 @@ class BarcodeScanRequest extends DTO
     public function setPostman_Id(int $postmanId): void
     {
         $this->postman_id = $postmanId;
+    }
+
+    public function getAdditionalBarcode() : ?string
+    {
+        if($this->additional_barcode === null)
+            return null;
+
+        return (string) trim($this->additional_barcode);
+    }
+
+    public function setAdditionalBarcode(?string $additional_barcode): void
+    {
+        $this->additional_barcode = $additional_barcode;
+    }
+
+    public function getAdditionalSvg(): ?string
+    {
+        return $this->additional_barcode;
+    }
+
+    public function setAdditionalSvg(?string $additional_svg): void
+    {
+        $this->additional_svg = $additional_svg;
     }
 
 

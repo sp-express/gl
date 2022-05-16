@@ -14,7 +14,7 @@ class Response extends DTO
      * @return static
      * @noinspection PhpMissingReturnTypeInspection
      */
-    public static function responseWithSuccess(?string $message = "")
+    public static function responseWithSuccess(?string $message = "Status zapisany")
     {
         return new static([
             'success' => true,

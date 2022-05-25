@@ -13,6 +13,7 @@ namespace swiatprzesylek\GL\DTO;
  * @property ?int $postman_id
  * @property ?string $additional_barcode
  * @property ?string $additional_svg
+ * @property bool $checking_pn
  */
 class BarcodeScanRequest extends DTO
 {
@@ -24,6 +25,7 @@ class BarcodeScanRequest extends DTO
     protected $postman_id;
     protected $additional_barcode;
     protected $additional_svg;
+    protected $checking_pn; // if true, just validate data, because it's step 1 of 2
 
     public function getBarcode(): string
     {
@@ -106,6 +108,16 @@ class BarcodeScanRequest extends DTO
     public function setAdditionalSvg(?string $additional_svg): void
     {
         $this->additional_svg = $additional_svg;
+    }
+
+    public function getCheckingPn() : bool
+    {
+        return (bool) $this->checking_pn;
+    }
+
+    public function setCheckingPn($checking_pn): void
+    {
+        $this->checking_pn = $checking_pn;
     }
 
 

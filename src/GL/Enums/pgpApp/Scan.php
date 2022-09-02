@@ -29,6 +29,8 @@ final class Scan
     public const STATUS_ALI_RETURNS_SCANNED = '10_scanned';
     
     public const STATUS_CSL_HOME_REDIRECT_SCANNED = '10_scanned';
+    public const STATUS_CSL_HOME_REDIRECT_MACHINE_FAILURE = 'MACHINE_FAILURE';
+    public const STATUS_CSL_HOME_REDIRECT_OVERSIZE = 'OVERSIZE';
 
     public const STATUS_PRODUCT_SCANNED = '10_scanned';
 

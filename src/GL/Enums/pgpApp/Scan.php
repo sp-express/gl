@@ -15,6 +15,8 @@ final class Scan
     public const TYPE_TEST = 'test';
     public const TYPE_OWN_MANIFESTS = 'own_manifests';
 
+    public const TYPE_CQL = 'cql';
+
     public const STATUS_DELIVERED = '40_delivered';
     public const STATUS_COULD_NOT_DELIVER = '55_could_not_deliver';
 
@@ -55,4 +57,7 @@ final class Scan
     public const STATUS_TEST_DOUBLE_2 = 'STATUS_TEST_DOUBLE_2';
 
     public const STATUS_OWN_MANIFEST_SIGNED = "STATUS_OWN_MANIFEST_SIGNED";
+
+    public const STATUS_CQL_IN_TRANSIT = "STATUS_CQL_IN_TRANSIT";
+    public const STATUS_CQL_COLLECTED = "STATUS_CQL_COLLECTED";
 }

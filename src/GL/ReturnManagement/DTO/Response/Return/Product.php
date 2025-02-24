@@ -5,11 +5,10 @@ namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
 class Product
 {
     protected string $sku;
-    protected ?string $ean;
-    protected ?string $description;
-    protected ?int $quantityExpected;
-    protected ?int $quantityActual;
-
+    protected ?string $ean = null;
+    protected ?string $description = null;
+    protected ?int $quantityExpected = null;
+    protected ?int $quantityActual = null;
     protected ?int $quantityReturned;
 
     public function getSku(): string
@@ -67,8 +66,15 @@ class Product
         return $this;
     }
 
+    public function getQuantityReturned(): ?int
+    {
+        return $this->quantityReturned;
+    }
 
-
-
+    public function setQuantityReturned(?int $quantityReturned): Product
+    {
+        $this->quantityReturned = $quantityReturned;
+        return $this;
+    }
 
 }

@@ -9,7 +9,7 @@ class Product
     protected ?string $description = null;
     protected ?int $quantityExpected = null;
     protected ?int $quantityActual = null;
-    protected ?int $quantityReturned;
+    protected ?int $quantityReturned = null;
 
     public function getSku(): string
     {

@@ -41,11 +41,4 @@ class File
         $this->metadata = $metadata;
         return $this;
     }
-
-
-
-
-
-
-
 }

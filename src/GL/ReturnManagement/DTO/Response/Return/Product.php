@@ -6,9 +6,11 @@ class Product
 {
     protected string $sku;
     protected ?string $ean;
-    protected string $description;
+    protected ?string $description;
     protected ?int $quantityExpected;
     protected ?int $quantityActual;
+
+    protected ?int $quantityReturned;
 
     public function getSku(): string
     {

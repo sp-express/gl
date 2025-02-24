@@ -3,7 +3,7 @@
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
 
 
-class Item
+class Item implements \JsonSerializable
 {
     protected string $localId;
     protected string $trackingNumber;
@@ -98,7 +98,17 @@ class Item
         return $this;
     }
 
-
-
+    public function jsonSerialize(): array
+    {
+        return [
+            'localId' => $this->localId,
+            'trackingNumber' => $this->trackingNumber,
+            'createdAt' => $this->createdAt->format('Y-m-d\TH:i:s.v\Z'), // Convert DateTime to string
+            'updatedAt' => $this->updatedAt->format('Y-m-d\TH:i:s.v\Z'),
+            'status' => $this->status,
+            'products' => $this->products,
+            'files' => $this->files
+        ];
+    }
 
 }

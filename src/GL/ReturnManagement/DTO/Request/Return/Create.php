@@ -6,6 +6,8 @@ class Create
 {
     protected ?string $localId = null;
     protected ?string $customerRef = null;
+    protected string $trackingNumber;
+
     protected ?string $note = null;
 
     public function getLocalId(): ?string
@@ -38,6 +40,17 @@ class Create
     public function setNote(?string $note): Create
     {
         $this->note = $note;
+        return $this;
+    }
+
+    public function getTrackingNumber(): string
+    {
+        return $this->trackingNumber;
+    }
+
+    public function setTrackingNumber(string $trackingNumber): Create
+    {
+        $this->trackingNumber = $trackingNumber;
         return $this;
     }
 }

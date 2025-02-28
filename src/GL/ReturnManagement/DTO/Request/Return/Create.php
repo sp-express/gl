@@ -7,6 +7,7 @@ class Create
     protected ?string $localId = null;
     protected ?string $customerRef = null;
     protected string $trackingNumber;
+    protected string $operator;
 
     protected ?string $note = null;
 
@@ -51,6 +52,17 @@ class Create
     public function setTrackingNumber(string $trackingNumber): Create
     {
         $this->trackingNumber = $trackingNumber;
+        return $this;
+    }
+
+    public function getOperator(): string
+    {
+        return $this->operator;
+    }
+
+    public function setOperator(string $operator): Create
+    {
+        $this->operator = $operator;
         return $this;
     }
 }

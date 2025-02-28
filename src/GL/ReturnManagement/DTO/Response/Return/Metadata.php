@@ -48,4 +48,10 @@ class Metadata
         return $this->extension;
     }
 
+    public function setExtension(string $extension): Metadata
+    {
+        $this->extension = $extension;
+        return $this;
+    }
+
 }

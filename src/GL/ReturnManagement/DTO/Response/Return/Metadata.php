@@ -8,6 +8,8 @@ class Metadata
     protected string $mimeType;
     protected int $size;
 
+    protected string $extension;
+
     public function getOriginalName(): string
     {
         return $this->originalName;
@@ -41,5 +43,9 @@ class Metadata
         return $this;
     }
 
+    public function getExtension(): string
+    {
+        return $this->extension;
+    }
 
 }

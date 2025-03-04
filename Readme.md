@@ -1,4 +1,4 @@
-# Sp.express GL
+# SP Express GL
 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/swiatprzesylek/gl.svg?style=flat-square)](https://packagist.org/packages/swiatprzesylek/gl/)

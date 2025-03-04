@@ -87,10 +87,11 @@ class BarcodeScanRequest extends DTO
         $this->postman_id = $postmanId;
     }
 
-    public function getAdditionalBarcode() : ?string
+    public function getAdditionalBarcode(): ?string
     {
-        if($this->additional_barcode === null)
+        if ($this->additional_barcode === null) {
             return null;
+        }
 
         return (string) trim($this->additional_barcode);
     }
@@ -110,7 +111,7 @@ class BarcodeScanRequest extends DTO
         $this->additional_svg = $additional_svg;
     }
 
-    public function getCheckingPn() : bool
+    public function getCheckingPn(): bool
     {
         return (bool) $this->checking_pn;
     }

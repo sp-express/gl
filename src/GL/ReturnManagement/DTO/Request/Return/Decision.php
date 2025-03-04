@@ -4,7 +4,6 @@ namespace swiatprzesylek\GL\ReturnManagement\DTO\Request\Return;
 
 class Decision
 {
-
     protected string $localId;
 
     /** @var DecisionItem[] */

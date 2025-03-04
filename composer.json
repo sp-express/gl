@@ -1,6 +1,6 @@
 {
     "name": "swiatprzesylek/gl",
-    "description": "swiatprzesylek global library",
+    "description": "sp.express global library",
     "type": "library",
     "license": "proprietary",
     "autoload": {
@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
+        "php": ">=8.0",
         "ext-json": "*"
     },
     "require-dev": {

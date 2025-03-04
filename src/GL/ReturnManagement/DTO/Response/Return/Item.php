@@ -2,7 +2,6 @@
 
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
 
-
 class Item
 {
     protected string $localId;

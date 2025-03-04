@@ -4,8 +4,22 @@ namespace swiatprzesylek\GL\ReturnManagement\DTO\Request\Return;
 
 class Decision
 {
+
+    protected string $localId;
+
     /** @var DecisionItem[] */
     protected array $items = [];
+
+    public function getLocalId(): string
+    {
+        return $this->localId;
+    }
+
+    public function setLocalId(string $localId): Decision
+    {
+        $this->localId = $localId;
+        return $this;
+    }
 
     public function getItems(): array
     {

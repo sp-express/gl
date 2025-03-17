@@ -6,33 +6,8 @@ use swiatprzesylek\GL\Webhook\Enums\Type;
 
 class Create
 {
-    protected string $url;
-    protected string $method;
     protected string $payload;
-    protected Type $type;
-    protected int $timeout = 10;
-
-    public function getUrl(): string
-    {
-        return $this->url;
-    }
-
-    public function setUrl(string $url): Create
-    {
-        $this->url = $url;
-        return $this;
-    }
-
-    public function getMethod(): string
-    {
-        return $this->method;
-    }
-
-    public function setMethod(string $method): Create
-    {
-        $this->method = $method;
-        return $this;
-    }
+    protected string $type;
 
     public function getPayload(): string
     {
@@ -45,25 +20,14 @@ class Create
         return $this;
     }
 
-    public function getType(): Type
+    public function getType(): string
     {
         return $this->type;
     }
 
-    public function setType(Type $type): Create
+    public function setType(string $type): Create
     {
         $this->type = $type;
-        return $this;
-    }
-
-    public function getTimeout(): int
-    {
-        return $this->timeout;
-    }
-
-    public function setTimeout(int $timeout): Create
-    {
-        $this->timeout = $timeout;
         return $this;
     }
 }

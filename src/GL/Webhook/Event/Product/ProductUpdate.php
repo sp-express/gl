@@ -2,7 +2,9 @@
 
 namespace swiatprzesylek\GL\Webhook\Event\Product;
 
-class Update
+use swiatprzesylek\GL\Webhook\Event\BaseEvent;
+
+class Update extends BaseEvent
 {
     protected string $sku;
 
@@ -16,8 +18,6 @@ class Update
         $this->sku = $sku;
         return $this;
     }
-
-
 
 
 }

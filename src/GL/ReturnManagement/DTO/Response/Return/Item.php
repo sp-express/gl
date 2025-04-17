@@ -6,6 +6,8 @@ class Item
 {
     protected string $localId;
     protected string $trackingNumber;
+
+    protected string $operator;
     protected \DateTimeImmutable $createdAt;
     protected \DateTimeImmutable $updatedAt;
     protected string $status;
@@ -94,6 +96,17 @@ class Item
     public function setFiles(array $files): Item
     {
         $this->files = $files;
+        return $this;
+    }
+
+    public function getOperator(): string
+    {
+        return $this->operator;
+    }
+
+    public function setOperator(string $operator): Item
+    {
+        $this->operator = $operator;
         return $this;
     }
 

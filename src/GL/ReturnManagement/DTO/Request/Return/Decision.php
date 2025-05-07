@@ -30,4 +30,11 @@ class Decision
         $this->items = $items;
         return $this;
     }
+
+    public static function getNestedTypes(): array
+    {
+        return [
+            'items' => DecisionItem::class,
+        ];
+    }
 }

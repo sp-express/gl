@@ -22,6 +22,8 @@ class Item
      */
     protected array $files = [];
 
+    protected ?AddressData $address = null;
+
     public function getLocalId(): string
     {
         return $this->localId;
@@ -107,6 +109,17 @@ class Item
     public function setOperator(string $operator): Item
     {
         $this->operator = $operator;
+        return $this;
+    }
+
+    public function getAddress(): ?AddressData
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?AddressData $address): Item
+    {
+        $this->address = $address;
         return $this;
     }
 

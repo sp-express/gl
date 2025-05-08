@@ -15,6 +15,8 @@ class Item
     protected ?string $outboundLocalId = null;
     protected ?string $inboundLocalId = null;
 
+    protected ?string $note = null;
+
     /**
      * @var Product[]
      */
@@ -145,6 +147,17 @@ class Item
     public function setInboundLocalId(?string $inboundLocalId): Item
     {
         $this->inboundLocalId = $inboundLocalId;
+        return $this;
+    }
+
+    public function getNote(): ?string
+    {
+        return $this->note;
+    }
+
+    public function setNote(?string $note): Item
+    {
+        $this->note = $note;
         return $this;
     }
 }

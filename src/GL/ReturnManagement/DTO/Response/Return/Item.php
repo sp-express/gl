@@ -12,6 +12,9 @@ class Item
     protected \DateTimeImmutable $updatedAt;
     protected string $status;
 
+    protected ?string $outboundLocalId = null;
+    protected ?string $inboundLocalId = null;
+
     /**
      * @var Product[]
      */
@@ -123,4 +126,25 @@ class Item
         return $this;
     }
 
+    public function getOutboundLocalId(): ?string
+    {
+        return $this->outboundLocalId;
+    }
+
+    public function setOutboundLocalId(?string $outboundLocalId): Item
+    {
+        $this->outboundLocalId = $outboundLocalId;
+        return $this;
+    }
+
+    public function getInboundLocalId(): ?string
+    {
+        return $this->inboundLocalId;
+    }
+
+    public function setInboundLocalId(?string $inboundLocalId): Item
+    {
+        $this->inboundLocalId = $inboundLocalId;
+        return $this;
+    }
 }

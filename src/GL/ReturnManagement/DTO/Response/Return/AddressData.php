@@ -11,7 +11,7 @@ class AddressData
     protected ?string $addressLineSecond = null;
     protected string $city;
     protected string $zipCode;
-    protected string $province;
+    protected ?string $province = null;
     protected string $country;
     protected ?string $phone = null;
     protected ?string $email = null;
@@ -82,12 +82,12 @@ class AddressData
         return $this;
     }
 
-    public function getProvince(): string
+    public function getProvince(): ?string
     {
         return $this->province;
     }
 
-    public function setProvince(string $province): AddressData
+    public function setProvince(?string $province): AddressData
     {
         $this->province = $province;
         return $this;

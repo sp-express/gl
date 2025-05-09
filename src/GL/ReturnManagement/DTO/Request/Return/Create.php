@@ -4,21 +4,21 @@ namespace swiatprzesylek\GL\ReturnManagement\DTO\Request\Return;
 
 class Create
 {
-    protected ?string $localId = null;
+    protected ?string $outboundLocalId = null;
     protected ?string $customerRef = null;
     protected string $trackingNumber;
     protected string $operator;
 
     protected ?string $note = null;
 
-    public function getLocalId(): ?string
+    public function getOutboundLocalId(): ?string
     {
-        return $this->localId;
+        return $this->outboundLocalId;
     }
 
-    public function setLocalId(?string $localId): Create
+    public function setOutboundLocalId(?string $outboundLocalId): Create
     {
-        $this->localId = $localId;
+        $this->outboundLocalId = $outboundLocalId;
         return $this;
     }
 

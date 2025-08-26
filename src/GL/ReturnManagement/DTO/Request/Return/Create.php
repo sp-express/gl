@@ -11,6 +11,9 @@ class Create
 
     protected ?string $note = null;
 
+    /** @var CreateItem[] $items */
+    protected array $items;
+
     public function getOutboundLocalId(): ?string
     {
         return $this->outboundLocalId;
@@ -65,4 +68,17 @@ class Create
         $this->operator = $operator;
         return $this;
     }
+
+    public function getItems(): array
+    {
+        return $this->items;
+    }
+
+    public function setItems(array $items): Create
+    {
+        $this->items = $items;
+        return $this;
+    }
+
+
 }

@@ -7,9 +7,15 @@ class Product
     protected string $sku;
     protected ?string $ean = null;
     protected ?string $description = null;
-    protected ?int $quantityExpected = null;
-    protected ?int $quantityActual = null;
-    protected ?int $quantityReturned = null;
+    protected string $uuid;
+    protected string $condition;
+
+    protected string $decision;
+    protected string $notes;
+    protected bool $received;
+
+    /** @var File[] */
+    protected array $files;
 
     public function getSku(): string
     {
@@ -44,37 +50,69 @@ class Product
         return $this;
     }
 
-    public function getQuantityExpected(): ?int
+    public function getUuid(): string
     {
-        return $this->quantityExpected;
+        return $this->uuid;
     }
 
-    public function setQuantityExpected(?int $quantityExpected): Product
+    public function setUuid(string $uuid): Product
     {
-        $this->quantityExpected = $quantityExpected;
+        $this->uuid = $uuid;
         return $this;
     }
 
-    public function getQuantityActual(): ?int
+    public function getCondition(): string
     {
-        return $this->quantityActual;
+        return $this->condition;
     }
 
-    public function setQuantityActual(?int $quantityActual): Product
+    public function setCondition(string $condition): Product
     {
-        $this->quantityActual = $quantityActual;
+        $this->condition = $condition;
         return $this;
     }
 
-    public function getQuantityReturned(): ?int
+    public function getDecision(): string
     {
-        return $this->quantityReturned;
+        return $this->decision;
     }
 
-    public function setQuantityReturned(?int $quantityReturned): Product
+    public function setDecision(string $decision): Product
     {
-        $this->quantityReturned = $quantityReturned;
+        $this->decision = $decision;
         return $this;
     }
 
+    public function getNotes(): string
+    {
+        return $this->notes;
+    }
+
+    public function setNotes(string $notes): Product
+    {
+        $this->notes = $notes;
+        return $this;
+    }
+
+    public function isReceived(): bool
+    {
+        return $this->received;
+    }
+
+    public function setReceived(bool $received): Product
+    {
+        $this->received = $received;
+        return $this;
+    }
+
+    public function getFiles(): array
+    {
+        return $this->files;
+    }
+
+    public function setFiles(array $files): Product
+    {
+        $this->files = $files;
+        return $this;
+    }
 }

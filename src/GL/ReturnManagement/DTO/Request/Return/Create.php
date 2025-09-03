@@ -80,5 +80,12 @@ class Create
         return $this;
     }
 
+    public static function getNestedTypes(): array
+    {
+        return [
+            'items' => CreateItem::class,
+        ];
+    }
+
 
 }

@@ -8,11 +8,10 @@ class Product
     protected ?string $ean = null;
     protected ?string $description = null;
     protected string $uuid;
-    protected string $condition;
-
-    protected string $decision;
-    protected string $notes;
-    protected bool $received;
+    protected ?string $condition = null;
+    protected ?string $decision = null;
+    protected ?string $notes = null;
+    protected ?bool $received = null;
 
     /** @var File[] */
     protected array $files;
@@ -39,12 +38,12 @@ class Product
         return $this;
     }
 
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function setDescription(string $description): Product
+    public function setDescription(?string $description): Product
     {
         $this->description = $description;
         return $this;
@@ -61,45 +60,45 @@ class Product
         return $this;
     }
 
-    public function getCondition(): string
+    public function getCondition(): ?string
     {
         return $this->condition;
     }
 
-    public function setCondition(string $condition): Product
+    public function setCondition(?string $condition): Product
     {
         $this->condition = $condition;
         return $this;
     }
 
-    public function getDecision(): string
+    public function getDecision(): ?string
     {
         return $this->decision;
     }
 
-    public function setDecision(string $decision): Product
+    public function setDecision(?string $decision): Product
     {
         $this->decision = $decision;
         return $this;
     }
 
-    public function getNotes(): string
+    public function getNotes(): ?string
     {
         return $this->notes;
     }
 
-    public function setNotes(string $notes): Product
+    public function setNotes(?string $notes): Product
     {
         $this->notes = $notes;
         return $this;
     }
 
-    public function isReceived(): bool
+    public function getReceived(): ?bool
     {
         return $this->received;
     }
 
-    public function setReceived(bool $received): Product
+    public function setReceived(?bool $received): Product
     {
         $this->received = $received;
         return $this;
@@ -115,4 +114,7 @@ class Product
         $this->files = $files;
         return $this;
     }
+
+
+
 }

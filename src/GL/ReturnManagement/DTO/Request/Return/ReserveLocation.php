@@ -18,8 +18,4 @@ class ReserveLocation
         return $this;
     }
 
-
-
-
-
 }

@@ -3,6 +3,10 @@
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
 use OpenApi\Attributes as OA;
 
+#[OA\Schema(
+    schema: 'Item',
+    description: 'Return item information'
+)]
 class Item
 {
     #[OA\Property(

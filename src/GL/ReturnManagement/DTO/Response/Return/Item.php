@@ -70,20 +70,20 @@ class Item
     #[OA\Property(
         description: 'Array of products',
         type: 'array',
-        items: new OA\Items(ref: '#/components/schemas/Product')
+        items: new OA\Items(ref: Product::class)
     )]
     protected array $products = [];
 
     #[OA\Property(
         description: 'Array of files',
         type: 'array',
-        items: new OA\Items(ref: '#/components/schemas/File')
+        items: new OA\Items(ref: File::class)
     )]
     protected array $files = [];
 
     #[OA\Property(
         description: 'Address data',
-        ref: '#/components/schemas/AddressData'
+        ref: AddressData::class
     )]
     protected ?AddressData $address = null;
 

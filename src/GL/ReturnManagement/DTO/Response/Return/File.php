@@ -23,7 +23,7 @@ class File
 
     #[OA\Property(
         description: 'File metadata',
-        ref: '#/components/schemas/Metadata'
+        ref: Metadata::class
     )]
     protected Metadata $metadata;
 

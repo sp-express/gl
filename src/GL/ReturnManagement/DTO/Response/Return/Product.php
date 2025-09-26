@@ -60,7 +60,7 @@ class Product
     #[OA\Property(
         description: 'Array of files',
         type: 'array',
-        items: new OA\Items(ref: '#/components/schemas/File')
+        items: new OA\Items(ref: File::class)
     )]
     protected array $files;
 

@@ -1,11 +1,30 @@
 <?php
 
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
+use OpenApi\Attributes as OA;
 
+#[OA\Schema(
+    schema: 'File',
+    description: 'File information'
+)]
 class File
 {
+    #[OA\Property(
+        description: 'File label',
+        example: 'product_image.jpg'
+    )]
     protected string $label;
+
+    #[OA\Property(
+        description: 'File URL',
+        example: 'https://example.com/files/product_image.jpg'
+    )]
     protected string $url;
+
+    #[OA\Property(
+        description: 'File metadata',
+        ref: 'Metadata'
+    )]
     protected Metadata $metadata;
 
     public function getLabel(): string

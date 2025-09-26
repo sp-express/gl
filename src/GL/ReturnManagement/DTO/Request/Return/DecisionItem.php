@@ -4,28 +4,28 @@ namespace swiatprzesylek\GL\ReturnManagement\DTO\Request\Return;
 
 class DecisionItem
 {
-    protected string $sku;
-    protected int $quantityAccepted;
+    protected string $uuid;
+    protected string $decision;
 
-    public function getSku(): string
+    public function getUuid(): string
     {
-        return $this->sku;
+        return $this->uuid;
     }
 
-    public function setSku(string $sku): DecisionItem
+    public function setUuid(string $uuid): DecisionItem
     {
-        $this->sku = $sku;
+        $this->uuid = $uuid;
         return $this;
     }
 
-    public function getQuantityAccepted(): int
+    public function getDecision(): string
     {
-        return $this->quantityAccepted;
+        return $this->decision;
     }
 
-    public function setQuantityAccepted(int $quantityAccepted): DecisionItem
+    public function setDecision(string $decision): DecisionItem
     {
-        $this->quantityAccepted = $quantityAccepted;
+        $this->decision = $decision;
         return $this;
     }
 

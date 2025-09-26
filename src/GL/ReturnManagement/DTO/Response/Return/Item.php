@@ -1,32 +1,90 @@
 <?php
 
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
+use OpenApi\Attributes as OA;
 
+#[OA\Schema(
+    schema: 'Item',
+    description: 'Return item information'
+)]
 class Item
 {
+    #[OA\Property(
+        description: 'Local identifier',
+        example: 'R250926/999/008/001'
+    )]
     protected string $localId;
+
+    #[OA\Property(
+        description: 'Tracking number',
+        example: 'TN123456789PL'
+    )]
     protected string $trackingNumber;
 
+    #[OA\Property(
+        description: 'Operator name',
+        example: 'DPD'
+    )]
     protected string $operator;
+
+    #[OA\Property(
+        description: 'Creation timestamp',
+        type: 'string',
+        format: 'date-time',
+        example: '2023-09-26T10:00:00+00:00'
+    )]
     protected \DateTimeImmutable $createdAt;
+
+    #[OA\Property(
+        description: 'Last update timestamp',
+        type: 'string',
+        format: 'date-time',
+        example: '2023-09-26T15:30:00+00:00'
+    )]
     protected \DateTimeImmutable $updatedAt;
+
+    #[OA\Property(
+        description: 'Return status',
+        example: 'processed'
+    )]
     protected string $status;
 
+    #[OA\Property(
+        description: 'Outbound local identifier',
+        example: 'OUT123456'
+    )]
     protected ?string $outboundLocalId = null;
+
+    #[OA\Property(
+        description: 'Inbound local identifier',
+        example: 'IN123456'
+    )]
     protected ?string $inboundLocalId = null;
 
+    #[OA\Property(
+        description: 'Additional notes',
+        example: 'Customer return in good condition'
+    )]
     protected ?string $note = null;
 
-    /**
-     * @var Product[]
-     */
+    #[OA\Property(
+        description: 'Array of products',
+        type: 'array',
+        items: new OA\Items(ref: 'Product')
+    )]
     protected array $products = [];
 
-    /**
-     * @var File[]
-     */
+    #[OA\Property(
+        description: 'Array of files',
+        type: 'array',
+        items: new OA\Items(ref: 'File')
+    )]
     protected array $files = [];
 
+    #[OA\Property(
+        description: 'Address data',
+        ref: 'AddressData'
+    )]
     protected ?AddressData $address = null;
 
     public function getLocalId(): string

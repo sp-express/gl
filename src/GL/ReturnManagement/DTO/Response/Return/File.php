@@ -3,6 +3,10 @@
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
 use OpenApi\Attributes as OA;
 
+#[OA\Schema(
+    schema: 'File',
+    description: 'File information'
+)]
 class File
 {
     #[OA\Property(

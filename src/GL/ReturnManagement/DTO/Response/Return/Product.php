@@ -1,19 +1,63 @@
 <?php
 
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return;
+use OpenApi\Attributes as OA;
 
 class Product
 {
+    #[OA\Property(
+        description: 'Product SKU',
+        example: 'ABC123'
+    )]
     protected string $sku;
+
+    #[OA\Property(
+        description: 'Product EAN',
+        example: '1234567890123'
+    )]
     protected ?string $ean = null;
+
+    #[OA\Property(
+        description: 'Product description',
+        example: 'Red cotton t-shirt size M'
+    )]
     protected ?string $description = null;
+
+    #[OA\Property(
+        description: 'Product UUID',
+        example: '550e8400-e29b-41d4-a716-446655440000'
+    )]
     protected string $uuid;
+
+    #[OA\Property(
+        description: 'Product condition',
+        example: 'new'
+    )]
     protected ?string $condition = null;
+
+    #[OA\Property(
+        description: 'Return decision',
+        example: 'approved'
+    )]
     protected ?string $decision = null;
+
+    #[OA\Property(
+        description: 'Additional notes',
+        example: 'Item in perfect condition'
+    )]
     protected ?string $notes = null;
+
+    #[OA\Property(
+        description: 'Whether the product was received',
+        example: true
+    )]
     protected ?bool $received = null;
 
-    /** @var File[] */
+    #[OA\Property(
+        description: 'Array of files',
+        type: 'array',
+        items: new OA\Items(ref: '#/components/schemas/File')
+    )]
     protected array $files;
 
     public function getSku(): string

@@ -1,16 +1,38 @@
 <?php
 
 namespace swiatprzesylek\GL\ReturnManagement\DTO\Response\Return\ReserveLocation;
+use OpenApi\Attributes as OA;
 
 class Location
 {
+    #[OA\Property(
+        description: 'Local identifier',
+        example: 'LOC-A1-001'
+    )]
     protected string $localId;
+
+    #[OA\Property(
+        description: 'Sector identifier',
+        example: 1
+    )]
     protected ?int $sectorId = null;
 
+    #[OA\Property(
+        description: 'Size class',
+        example: 'XL'
+    )]
     protected ?string $sizeClass = null;
 
+    #[OA\Property(
+        description: 'Row type',
+        example: 'AISLE'
+    )]
     protected string $rowType;
 
+    #[OA\Property(
+        description: 'Location type',
+        example: 'RACK'
+    )]
     protected string $type;
 
     public function getLocalId(): string
